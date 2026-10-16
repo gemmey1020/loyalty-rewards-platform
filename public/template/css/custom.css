@@ -1,0 +1,492 @@
+
+ /* HEADER */
+ .posh-header {
+        background-color: rgba(255, 255, 255, 0.97);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .posh-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .posh-header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    /* Logo Styles */
+    .posh-logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .posh-logo img {
+        width: 80px;
+        height: auto;
+        transition: all 0.3s ease;
+    }
+
+    .posh-logo img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Right Side Menu Styles */
+    .posh-menu-side {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Button Styles */
+    .posh-btn {
+       background: linear-gradient(90deg, #0a4f89, #0e69b2);
+
+        color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(37, 117, 252, 0.2);
+        font-size: 14px;
+    }
+
+    .posh-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 7px 15px rgba(37, 117, 252, 0.3);
+    }
+
+    /* Language Switcher Styles */
+    .posh-lang-switcher {
+        display: flex;
+        align-items: center;
+        background: rgba(242, 242, 242, 0.6);
+        padding: 5px 15px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .posh-lang-switcher:hover {
+        background: rgba(242, 242, 242, 0.9);
+    }
+
+    .posh-lang-switcher a {
+        color: #555;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0 5px;
+        transition: all 0.3s ease;
+    }
+
+    .posh-lang-switcher a.posh-active-lang {
+        color: #2575fc;
+        font-weight: 600;
+    }
+
+    .posh-lang-switcher a:hover {
+        color: #6a11cb;
+    }
+
+    .posh-lang-separator {
+        color: #ccc;
+        margin: 0 2px;
+    }
+/* End header */
+
+
+.hover-underline {
+    font-weight: 800;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    /* extra top padding for the top stripe */
+    padding: 18px 30px 15px;
+    display: inline-block;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(20, 20, 20, 0.8) 100%
+    );
+    border-radius: 8px;
+    border-left: 5px solid #0e69b2;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-underline::before,
+.hover-underline::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #0a4f89, #0e69b2, #6baedc);
+}
+
+.hover-underline::before {
+    top: 0;
+    left: -100%;
+    animation: racing-stripe 3s infinite linear;
+}
+
+.hover-underline::after {
+    bottom: 0;
+    right: -100%;
+    animation: racing-stripe-reverse 3s infinite linear;
+}
+
+@keyframes racing-stripe {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes racing-stripe-reverse {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .admin-heading {
+        font-size: 2rem;
+        padding: 12px 20px;
+    }
+
+    .content-wrapper {
+        padding: 80px 0;
+    }
+}
+
+/* ////////////////////////////////////// */
+
+.editicon {
+    margin: 0 !important;
+    position: static !important;
+    background: #0e69b2 !important;
+}
+
+.butonIconEfit {
+    bottom: 14px;
+    background: center;
+    left: 61%;
+    position: absolute;
+    border: none !important;
+}
+
+.logoloader {
+    background-image: url("../images/Posh_Center-1-removebg-preview.png") !important;
+    width: auto;
+    height: auto;
+}
+
+/* progress_bar */
+
+.progress-container {
+    margin: 5rem auto;
+    max-width: 800px;
+    position: relative;
+}
+
+/* Labels above the bar */
+.labels-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* The progress bar */
+.progress-bar-container {
+    background: #e0e0e0;
+    border-radius: 30px;
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+html[dir="rtl"] .progress-bar-container {
+    transform: scaleX(-1);
+    background: #e0e0e0;
+    border-radius: 30px;
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels below the bar */
+.labels-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%; /* Initial width for animation */
+    background: linear-gradient(to right, #5fa9e8, #0e69b2);
+    background-size: cover;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+
+    /* Grow once on load */
+    animation: growProgress 2s ease-in-out forwards;
+}
+
+/* Animate width from 0% to 70% only once */
+@keyframes growProgress {
+    from {
+        width: 0;
+    }
+    to {
+        width: 70%; /* Final width */
+    }
+}
+
+/* Shine effect only */
+.progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    animation: shine 10s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* From Uiverse.io by mobinkakei */
+.buttonsave {
+    position: relative;
+    margin: 0;
+    padding: 3px 35px;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+    border-radius: 0.24rem;
+    color: #1d89ff;
+    font-weight: 400;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.buttonsave span {
+    color: #164ca7;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+
+.buttonsave:hover {
+    animation: rotate624 0.7s ease-in-out both;
+}
+
+.buttonsave:hover span {
+    animation: storm1261 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes rotate624 {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm1261 {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+.btn-shine {
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-shine span {
+    z-index: 20;
+}
+
+.btn-shine:after {
+    background: #1d89ff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: 0.4;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+}
+
+.btn-shine:hover:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.dt-input {
+    border-radius: 2rem !important;
+    padding: 0.25rem 1rem !important;
+    max-width: 13rem !important;
+}
+
+@media (max-width: 1000px) {
+    .dt-empty {
+        width: 100% !important;
+    }
+}
+@media (max-width: 700px) {
+    .card-parent {
+        width: 100%;
+    }
+}
+
+html[dir="rtl"] .log {
+    justify-content: flex-end;
+}
+
+.divinput-pass {
+    position: relative;
+}
+.icon-pass {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.medium {
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+    scrollbar-color: #0e69b2 #fff;
+    font-size: 40px;
+}
+.ultra {
+    display: flex;
+    overflow-y: hidden;
+    /* justify-content: center; */
+    /* align-items: center; */
+    scrollbar-color: #0e69b2 #fff;
+    font-size: 40px;
+}
+
+html[dir="rtl"] .icon-pass {
+    right: auto;
+    left: 10px;
+}
+
+.card-analytics {
+    min-width: 15rem;
+}
+
+.responsive-heading {
+  /* min 1.5rem, scales with viewport up to 3rem */
+  font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+  line-height: 1.2;
+}
+
+/* in public/css/subheader.css, loaded last */
+
+section#subheader {
+  /* more specific than just #subheader */
+  position: relative !important;
+  background-color: #000 !important;
+}
+
+section#subheader .subheader-overlay {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: url("/template/images/cars/pexels-wendywei-1662570.jpg") center center/cover !important;
+  opacity: 0.5 !important;
+  z-index: 1 !important;
+}
+
+#subheader .subheader-content {
+  position: relative;
+  z-index: 2;
+  padding: 100px 0;
+
+}
